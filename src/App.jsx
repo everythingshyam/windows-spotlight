@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
-import './App.css';
+import './Styles/App.css';
 import { useReducer } from 'react';
-import { DigitButton } from './DigitButton';
-import { OperationButton } from './OperationButton';
+import { DigitButton } from './Components/DigitButton';
+import { OperationButton } from './Components/OperationButton';
 
 export const ACTIONS = {
 	DIGIT_CLICK: 'digit-click',
