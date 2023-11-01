@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	color: whitesmoke;
+}
+body {
+	margin: 0;
+	/* min-width: 500px; */
+	/* min-height: 650px; */
+	/* resize: none; */
+	background-color: green;
+}
+
+.container {
+	width: 500px;
+	height: 650px;
+	padding: 10px;
+	background-color: teal;
+	display: grid;
+	grid-template-columns: repeat(4, 20%);
+	/* TODO grid not working properly for display board */
+	grid-template-rows: max(30px, auto) repeat(5, 12%);
+	gap: 5px;
+	border: 1px solid red;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0.75);
+	font-size: 1.2rem;
+}
+
+button:hover,
+button:active {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.span-two {
+	grid-column: span 2;
+}
+
+.display-bar {
+	background-color: rgba(0, 0, 0, 0.75);
+	grid-column: 1/-1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	padding: 5px;
+}
+
+.display-bar > * {
+	overflow-wrap: anywhere;
+}
+
+.display-bar > .first-operand {
+	font-size: 1.5rem;
+}
+
+.display-bar > .second-operand {
+	font-size: 2.5rem;
+}
